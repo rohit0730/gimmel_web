@@ -49,42 +49,28 @@ function Header() {
     }, [menuOpen]);
 
     const [showHistory, setShowHistory] = useState(false);
-    const searchContainerRef = useRef(null);
+    const [showFilter, setShowFilter] = useState(false);
+    const containerRef = useRef(null);
 
     const handleShowHistory = () => {
         setShowHistory(true);
     };
 
-    const handleClickOutside = (event) => {
-        if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
-            setShowHistory(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('click', handleClickOutside);
-        return () => {
-            window.removeEventListener('click', handleClickOutside);
-        };
-    }, []);
-
-    const [showFilter, setShowFilter] = useState(false);
-    const filterContainerRef = useRef(null);
-
     const handleShowFilter = () => {
         setShowFilter(true);
     };
 
-    const handleClickOutsideFilter = (event) => {
-        if (filterContainerRef.current && !filterContainerRef.current.contains(event.target)) {
+    const handleClickOutside = (event) => {
+        if (containerRef.current && !containerRef.current.contains(event.target)) {
+            setShowHistory(false);
             setShowFilter(false);
         }
     };
 
     useEffect(() => {
-        window.addEventListener('click', handleClickOutsideFilter);
+        window.addEventListener('mousedown', handleClickOutside);
         return () => {
-            window.removeEventListener('click', handleClickOutsideFilter);
+            window.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
 
@@ -96,7 +82,7 @@ function Header() {
                         <Image src={Logo} alt="logo" width="100" height="100" />
                     </Link>
 
-                    <div className="search-container" ref={searchContainerRef}>
+                    <div className="search-container" ref={containerRef}>
                         <input
                             type="text"
                             className="search-input"

@@ -22,12 +22,20 @@
     width: 100%;
     text-align: left;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+
 }
 
 .request-data .nav-item .nav-link svg {
-    margin-right: 8px;
-    width: 16px;
-    height: 16px;
+    /* margin-right: 8px; */
+    min-width: 16px;
+    min-height: 16px;
+    display: none;
+}
+
+.request-data .nav-item .nav-link.active svg {
+    display: block;
 }
 
 .card-padding-request {
@@ -216,7 +224,7 @@
     text-align: right;
 }
 
-.btn.btn-orange {
+.btn.btn-orange-request {
     background-color: var(--gimmel-orange);
     color: #ffffff;
     border: 1px solid var(--gimmel-orange);

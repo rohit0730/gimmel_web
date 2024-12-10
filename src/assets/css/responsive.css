@@ -183,6 +183,7 @@
     .top-space-request {
         padding-top: 70px;
         padding-bottom: 80px;
+        margin-bottom: 0;
     }
 
     .logo {

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Header from "../../../components/header/header";
-import { MdAddCircleOutline } from "react-icons/md";
+import { MdMoreVert, MdAddCircleOutline } from "react-icons/md";
 import Tab from 'react-bootstrap/Tab';
 import Nav from 'react-bootstrap/Nav';
 import './request.css';
@@ -84,13 +84,13 @@ function RequestData() {
                                 <Nav variant="pills" className="flex-column request-data">
                                     <Nav.Item>
                                         <Nav.Link eventKey="first">
-                                            <MdAddCircleOutline />New Request
+                                            <MdAddCircleOutline className="me-2 d-block" />New Request
                                         </Nav.Link>
                                     </Nav.Item>
                                     <div className="dropdown-divider"></div>
                                     <Nav.Item>
                                         <Nav.Link eventKey="second">
-                                            Understanding and Managing Anxiety in Teenagers
+                                            Understanding and Managing Anxiety in Teenagers <MdMoreVert />
                                         </Nav.Link>
                                     </Nav.Item>
                                 </Nav>
@@ -318,7 +318,7 @@ function RequestData() {
                                                                         <div className="footer-btn-container">
                                                                             <div className="btn-right">
                                                                                 <button className="btn btn-orange-outline">None of these</button>
-                                                                                <button className="btn btn-orange" onClick={handleConfirm}>
+                                                                                <button className="btn btn-orange-request" onClick={handleConfirm}>
                                                                                     Confirm
                                                                                 </button>
                                                                             </div>

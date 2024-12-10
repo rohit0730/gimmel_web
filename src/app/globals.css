@@ -1191,7 +1191,7 @@ a.see-all {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 48px;
+  /* height: 48px; */
 }
 
 .back-button .btn {
@@ -1890,4 +1890,75 @@ a.see-all {
 
 .custom-modal-body {
   margin: 16px 0 0;
+}
+
+.select-count {
+  background-color: var(--gimmel-orange);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 16px;
+  line-height: normal;
+}
+
+.text-area label {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--gimmel-gray);
+}
+
+.text-area textarea {
+  font-size: 14px;
+  color: var(--gimmel-darkBlue);
+  border-radius: 8px;
+  border: 1px solid var(--gimmel-darkBlue);
+  padding: 8px;
+  height: 96px;
+  resize: none;
+}
+
+.text-area p {
+  font-size: 12px !important;
+  color: var(--gimmel-gray) ! important;
+}
+
+.selected-list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.selected-list li {
+  background-color: var(--gimmel-orange);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.multi-select {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--gimmel-darkBlue);
+  z-index: 9;
+  border-radius: 8px;
+  position: relative;
+}
+
+.select-container .form-check-input:checked {
+  background-color: var(--gimmel-orange);
+  border-color: var(--gimmel-orange) ! important;
+}
+
+.select-container .form-check-input:focus {
+  box-shadow: none;
 }
