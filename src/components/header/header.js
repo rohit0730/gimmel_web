@@ -30,9 +30,9 @@ function Header() {
 
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // const toggleMenu = () => {
-    //     setMenuOpen(!menuOpen);
-    // };
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
 
     const handleLinkClick = () => {
         setMenuOpen(false);
@@ -40,7 +40,7 @@ function Header() {
 
     React.useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth > 768 && menuOpen) {
+            if (window.innerWidth > 991 && menuOpen) {
                 setMenuOpen(false);
             }
         };
@@ -192,6 +192,11 @@ function Header() {
                         </ul>
                     </div>
                 </div>
+                {/* <div className="burger" id="burger" onClick={toggleMenu}>
+                    <span className="burger-line"></span>
+                    <span className="burger-line"></span>
+                    <span className="burger-line"></span>
+                </div> */}
                 <div className="sec-center">
                     <Link href="/account" className="logo">
                         <div className={`for-dropdown profile-btn-view ${pathname === "/account" ? "active" : ""}`} htmlFor="dropdown">
