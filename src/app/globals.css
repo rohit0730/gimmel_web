@@ -674,6 +674,10 @@ span.user-name {
   -webkit-box-orient: vertical;
 }
 
+.de-info p.expanded {
+  -webkit-line-clamp: unset;
+}
+
 .category-card-image {
   position: relative;
   height: auto;
