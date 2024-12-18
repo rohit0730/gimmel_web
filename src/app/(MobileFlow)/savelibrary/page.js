@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { MdMoreVert, MdAddCircleOutline , MdDeleteOutline} from "react-icons/md";
 import Link from "next/link";
@@ -9,6 +9,7 @@ import { Modal } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { IoCloseSharp } from "react-icons/io5";
 import '../../CommenStyle/details.css';
+import { FiAlertOctagon } from "react-icons/fi";
 
 function SaveLibrary() {
 

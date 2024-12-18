@@ -153,10 +153,10 @@ function RequestData() {
 
                         <div className="report-modal-text">
                             <div className="report-modal-title">
-                                How's your experience so far?
+                                How&apos;s your experience so far?
                             </div>
                             <div className="share-alart">
-                                We’d love to hear your thoughts! What’s working well, and what would you improve?
+                                We&apos&apos;d love to hear your thoughts! What&apos;s working well, and what would you improve?
                             </div>
                             <div className="textarea-container mb-4">
                                 <Form.Control as="textarea" rows={3} placeholder="" />
