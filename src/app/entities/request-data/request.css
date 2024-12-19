@@ -206,8 +206,13 @@
 }
 
 .check-button input:checked {
-    background-color: var(--gimmel-orange);
+    background-color: transparent;
     border-color: var(--gimmel-orange);
+}
+
+.check-button input:checked[type=radio] {
+    --bs-form-check-bg-image: url("../../../assets/images/check-bg.svg");
+    padding: 4px !important;
 }
 
 .check-button input:focus {
