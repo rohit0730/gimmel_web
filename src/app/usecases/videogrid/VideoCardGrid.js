@@ -155,7 +155,7 @@ const VideoCard = ({ video }) => {
             </Modal>
 
             {/* Save to My Library Modal start */}
-            <Modal show={show1} onHide={handleClose1} centered className='custom-modal'>
+            <Modal show={show1} onHide={handleClose1} centered className='custom-modal pe-0'>
                 <Modal.Header closeButton>
                     <Modal.Title>Save to My Library</Modal.Title>
                 </Modal.Header>

@@ -116,7 +116,7 @@ function WatchVideo() {
                 </div>
                 <div className="dropdown-divider"></div>
                 <Modal.Body>
-                    <div className="modal-body-container">
+                    <div className="modal-body-container share-modal">
                         <div className="share-comtent">
                             <div className="share-alart">
                                 Do you want to attach the generated materials to the shared link?

@@ -246,7 +246,7 @@ body {
   .menu-inner {
     display: flex;
     flex-direction: row;
-    column-gap: 1rem;
+    column-gap: 28px;
     margin: 0 auto;
     justify-content: flex-end;
   }
@@ -759,20 +759,20 @@ span.user-name {
   overflow: unset !important;
 }
 
-.slider-section {
+.swiper-wrapper, .slider-section {
   position: relative;
 }
 
-.slider-section::after {
+.swiper-wrapper::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  /* Adjust for the fade-out height */
+  right: 0;
+  width: 100px;
+  height: 100%;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
   pointer-events: none;
+  z-index: 999;
 }
 
 .swiper-button-custom-prev,
@@ -922,9 +922,9 @@ span.user-name {
 }
 
 .short-by p {
-  font-size: 14px;
+  font-size: 14px !important;
   font-weight: bold;
-  color: #87A7AD;
+  color: #87A7AD !important;
   margin: 0;
   padding: 0;
   letter-spacing: 0.5px;
@@ -963,9 +963,19 @@ span.user-name {
 
 .list-type-view {
   display: flex;
-  gap: 16px;
+  gap: 8px;
   align-items: center;
 }
+
+.short-by-select {
+  appearance: none; /* Removes default styling */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background: url('../assets/images/select-arrow.svg') no-repeat right center transparent ! important; 
+  background-size: 16px; /* Adjust size as needed */
+  padding-right: 30px !important; /* Add space for the icon */
+}
+
 
 .list-icon-text {
   font-size: 14px;
@@ -1010,6 +1020,13 @@ span.user-name {
 .body-middle {
   margin: 24px 0;
   height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.body-middle::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
 
 .folder-content-right .folder-icon svg {
@@ -1105,7 +1122,7 @@ span.user-name {
 
 .card-white {
   background: #ffffff;
-  margin-top: 16px;
+  margin-top: 24px;
   padding: 16px;
   border-radius: 8px;
   border: 1px solid #E7EDEF;
@@ -2042,7 +2059,7 @@ button.folder-icon {
   max-width: 600px ! important;
 }
 
-.modal-full .modal-dialog{
+.modal-full .modal-dialog {
   max-width: 98% ! important;
   margin: 16px auto ! important;
 }
@@ -2061,4 +2078,29 @@ button.folder-icon {
 
 .modal-full .modal-body .react-player {
   border-radius: 8px 8px 0px 0px;
+}
+
+.number-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--gimmel-darkBlue);
+}
+
+.btn-light-blue {
+  background-color: #E7EDEF ! important;
+  color: #104e65 ! important;
+  border: 1px solid #E7EDEF;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  height: 44px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.share-modal .question-select .form-check {
+  margin-bottom: 24px;
 }

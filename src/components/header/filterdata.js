@@ -252,13 +252,17 @@ function FilterData() {
                         <Form.Control type="text" placeholder="Set difficulty" />
                     </Form.Group>
                 </div>
-                <div className="select-container mt-4 mb-4">
-                    <RangeSlider
-                        className="single-thumb"
-                        defaultValue={[0, 50]}
-                        thumbsDisabled={[true, false]}
-                        rangeSlideDisabled={true}
-                    />
+                <div className="select-container mt-4">
+                    <div className='range-slider-container inline-gap-8'>
+                        <div className='number-text'>1</div>
+                        <RangeSlider
+                            className="single-thumb"
+                            defaultValue={[0, 50]}
+                            thumbsDisabled={[true, false]}
+                            rangeSlideDisabled={true}
+                        />
+                        <div className='number-text'>10</div>
+                    </div>
                 </div>
                 <div className="dropdown-divider"></div>
                 <div className="select-container">
@@ -303,7 +307,7 @@ function FilterData() {
                         <Form.Label>Primary Audience</Form.Label>
                     </Form.Group>
                     <div className="tab-select">
-                        <div className="list-group" id="list-tab" role="tablist">
+                        <div className="list-group btn-list-2" id="list-tab" role="tablist">
                             <button
                                 className={`list-group-item list-group-item-action ${selectedAudience === "Student" ? "active" : ""}`}
                                 id="list-home-list"

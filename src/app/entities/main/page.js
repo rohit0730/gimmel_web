@@ -12,13 +12,14 @@ function Main() {
 
             <main id="main" className="top-space">
                 <div className="custom-container">
-                    <div className="page-main-title">
+                    <div className="page-main-title mb-3">
                         <h3>Categories</h3>
                         <Link href="/categories" className="see-all">See more categories</Link>
                     </div>
 
                     <SliderSection />
-
+                </div>
+                <div className="custom-container">
                     <div className="page-main-title">
                         <h3>Recommended for you</h3>
                     </div>

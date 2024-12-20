@@ -239,6 +239,10 @@
     font-weight: 600;
 }
 
+.btn.btn-orange-request:disabled {
+    opacity: 0.25 !important;
+}
+
 .btn.btn-orange-outline {
     color: var(--gimmel-orange);
     border: transparent;
