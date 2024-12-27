@@ -262,48 +262,53 @@ const LearningStep = () => {
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="step-button">
-                                    <Link href="/successonboarding" className="btn-color-blue ">Okay</Link>
-                                </div>
                             </div>
                         </div>
 
                         {/* Pagination Section */}
-                        <div className="pagination-section pagination">
-                            <ul className="">
-                                <li>
-                                    <button
-                                        className={`step-btn step-first ${currentIndex === 0 ? "disabled" : ""
-                                            }`}
-                                        onClick={previousSlide}
-                                    >
-                                        <FaChevronLeft />
-                                    </button>
-                                </li>
-                                {images.map((_, index) => (
-                                    <li key={index}>
+                        <div className='bottom-btn-container'>
+                            <div className="pagination-section pagination">
+                                <ul className="">
+                                    {/* <li>
                                         <button
-                                            className={`dot ${index === currentIndex ? "active" : ""
+                                            className={`step-btn step-first ${currentIndex === 0 ? "disabled" : ""
                                                 }`}
-                                            onClick={() => changeSlide(index)}
+                                            onClick={previousSlide}
                                         >
-                                            <span></span>
+                                            <FaChevronLeft />
                                         </button>
-                                    </li>
-                                ))}
-                                <li>
-                                    <button
-                                        className={`step-btn step-last ${currentIndex === images.length - 1 ? "disabled" : ""
-                                            }`}
-                                        onClick={nextSlide}
-                                    >
-                                        <FaChevronRight />
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="skip-btn">
-                            <Link href="price.html" className="btn-text">Skip</Link>
+                                    </li> */}
+                                    {images.map((_, index) => (
+                                        <li key={index}>
+                                            <button
+                                                className={`dot ${index === currentIndex ? "active" : ""
+                                                    }`}
+                                                onClick={() => changeSlide(index)}
+                                            >
+                                                <span></span>
+                                            </button>
+                                        </li>
+                                    ))}
+                                    {/* <li>
+                                        <button
+                                            className={`step-btn step-last ${currentIndex === images.length - 1 ? "disabled" : ""
+                                                }`}
+                                            onClick={nextSlide}
+                                        >
+                                            <FaChevronRight />
+                                        </button>
+                                    </li> */}
+                                </ul>
+                            </div>
+                            <div className="step-button">
+                                {
+                                    currentIndex === images.length - 1 ? (
+                                        <Link href="/successonboarding" className="btn-color-blue ">Finish</Link>
+                                    ) : (
+                                        <button type="button" className="btn-color-blue" onClick={nextSlide}>Next</button>
+                                    )
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>

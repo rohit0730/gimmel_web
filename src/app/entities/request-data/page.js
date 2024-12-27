@@ -385,7 +385,7 @@ function RequestData() {
                                                     <div className="col-10">
                                                         <div className="page-request-title">What do you need</div>
                                                         <div className="page-request-data">
-                                                            <Form className="request-data-form">
+                                                            <Form className="request-data-form form-width">
                                                                 <Form.Group className="mb-4 row" controlId="exampleForm.ControlInput1">
                                                                     <div className="col-4">
                                                                         <Form.Label>Title of your request</Form.Label>
@@ -439,7 +439,7 @@ function RequestData() {
                                                     <div className="col-10">
                                                         <div className="page-request-title">Request overview</div>
                                                         <div className="page-request-data">
-                                                            <Form className="request-data-form-overview">
+                                                            <Form className="request-data-form-overview form-width">
                                                                 <Form.Group className="mb-4 row" controlId="exampleForm.ControlInput1">
                                                                     <div className="col-4">
                                                                         <Form.Label>Title of your request</Form.Label>

@@ -392,7 +392,6 @@
     text-align: center;
 }
 
-
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
     .card-padding-request {
         padding: 40px 0px;

@@ -84,6 +84,12 @@ const Signup = () => {
                                             </div>
                                             <div className="col-md-12">
                                                 <div className="form-group">
+                                                    <label htmlFor="dob">Date of Birth</label>
+                                                    <input type="date" className="form-control" id="dob" placeholder="" />
+                                                </div>
+                                            </div>
+                                            <div className="col-md-12">
+                                                <div className="form-group">
                                                     <label htmlFor="Password">Password*</label>
                                                     <input type="password" className="form-control" id="Password" placeholder="" />
                                                 </div>

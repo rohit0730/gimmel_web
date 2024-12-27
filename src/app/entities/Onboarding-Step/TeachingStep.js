@@ -7,11 +7,11 @@ import Link from "next/link";
 
 const TeachingStep = () => {
     const images = [
-        require("../../../assets/images/pixel.svg"),
+        "",
         require("../../../assets/images/Artwork.svg"),
         require("../../../assets/images/step-3.svg"),
         // require("../../../assets/images/step-4.svg"),
-        require("../../../assets/images/step-5.svg"),
+        require("../../../assets/images/18+.svg"),
         require("../../../assets/images/stap-6.svg"),
     ];
 
@@ -200,7 +200,7 @@ const TeachingStep = () => {
                 {/* Right Banner Section */}
                 <div className="col-md-5">
                     <div className="right-banner mt-150">
-                        <div className="right-side-content">
+                        <div className="right-side-content question-select">
                             {/* Content Sections */}
                             <div
                                 className={`content-section ${currentIndex === 0 ? "active" : ""
@@ -421,16 +421,14 @@ const TeachingStep = () => {
                                         ))}
                                     </ul>
                                 </div>
-                                <div className="step-button">
-                                    <Link href="/successonboarding" className="btn-color-blue ">Okay</Link>
-                                </div>
                             </div>
                         </div>
 
                         {/* Pagination Section */}
-                        <div className="pagination-section pagination">
-                            <ul className="">
-                                <li>
+                        <div className='bottom-btn-container'>
+                            <div className="pagination-section pagination">
+                                <ul className="">
+                                    {/* <li>
                                     <button
                                         className={`step-btn step-first ${currentIndex === 0 ? "disabled" : ""
                                             }`}
@@ -438,19 +436,19 @@ const TeachingStep = () => {
                                     >
                                         <FaChevronLeft />
                                     </button>
-                                </li>
-                                {images.map((_, index) => (
-                                    <li key={index}>
-                                        <button
-                                            className={`dot ${index === currentIndex ? "active" : ""
-                                                }`}
-                                            onClick={() => changeSlide(index)}
-                                        >
-                                            <span></span>
-                                        </button>
-                                    </li>
-                                ))}
-                                <li>
+                                </li> */}
+                                    {images.map((_, index) => (
+                                        <li key={index}>
+                                            <button
+                                                className={`dot ${index === currentIndex ? "active" : ""
+                                                    }`}
+                                                onClick={() => changeSlide(index)}
+                                            >
+                                                <span></span>
+                                            </button>
+                                        </li>
+                                    ))}
+                                    {/* <li>
                                     <button
                                         className={`step-btn step-last ${currentIndex === images.length - 1 ? "disabled" : ""
                                             }`}
@@ -458,11 +456,18 @@ const TeachingStep = () => {
                                     >
                                         <FaChevronRight />
                                     </button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="skip-btn">
-                            <Link href="price.html" className="btn-text">Skip</Link>
+                                </li> */}
+                                </ul>
+                            </div>
+                            <div className="step-button">
+                                {
+                                    currentIndex === images.length - 1 ? (
+                                        <Link href="/successonboarding" className="btn-color-blue ">Finish</Link>
+                                    ) : (
+                                        <button type="button" className="btn-color-blue" onClick={nextSlide}>Next</button>
+                                    )
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
