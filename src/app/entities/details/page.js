@@ -298,7 +298,7 @@ function VideoDetails() {
             </Modal>
 
             {/* New folder Modal start */}
-            <Modal show={show5} onHide={handleClose5} centered className='custom-modal'>
+            <Modal show={show5} onHide={handleClose5} centered className='custom-modal new-folder-modal'>
                 <Modal.Header closeButton>
                     <Modal.Title>New folder</Modal.Title>
                 </Modal.Header>

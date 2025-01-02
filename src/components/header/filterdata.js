@@ -139,32 +139,32 @@ function FilterData() {
                     <div className="tab-select">
                         <div className="list-group" id="list-tab" role="tablist">
                             <button
-                                className={`list-group-item list-group-item-action ${selectedAge === "18+" ? "active" : ""}`}
+                                className={`list-group-item list-group-item-action ${selectedAge === "3 years" ? "active" : ""}`}
                                 id="list-home-list"
-                                onClick={() => handleClick("18+")}
+                                onClick={() => handleClick("3 years")}
                             >
-                                18+
+                                3 years
                             </button>
                             <button
-                                className={`list-group-item list-group-item-action ${selectedAge === "21+" ? "active" : ""}`}
+                                className={`list-group-item list-group-item-action ${selectedAge === "16 years" ? "active" : ""}`}
                                 id="list-profile-list"
-                                onClick={() => handleClick("21+")}
+                                onClick={() => handleClick("16 years")}
                             >
-                                21+
+                                16 years
                             </button>
                             <button
-                                className={`list-group-item list-group-item-action ${selectedAge === "25+" ? "active" : ""}`}
+                                className={`list-group-item list-group-item-action ${selectedAge === "18 years" ? "active" : ""}`}
                                 id="list-messages-list"
-                                onClick={() => handleClick("25+")}
+                                onClick={() => handleClick("18 years")}
                             >
-                                25+
+                                18 years
                             </button>
                             <button
-                                className={`list-group-item list-group-item-action ${selectedAge === "30+" ? "active" : ""}`}
+                                className={`list-group-item list-group-item-action ${selectedAge === "21 years" ? "active" : ""}`}
                                 id="list-settings-list"
-                                onClick={() => handleClick("30+")}
+                                onClick={() => handleClick("21 years")}
                             >
-                                30+
+                                21 years
                             </button>
                         </div>
                     </div>

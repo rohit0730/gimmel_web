@@ -51,6 +51,46 @@ const videoData = [
             'Explain the dangers of smoking in detail based on the biological and scientific aspects of the consequences of nicotine in chain smokers.',
         imageSrc: 'assets/images/video-thumbnil.svg',
     },
+    {
+        id: 5,
+        title: 'Dangers of smoking | Health | Biology | FuseSchool',
+        duration: '2:30',
+        rating: '8/10',
+        engagement: 'Engagement Rating',
+        description:
+            'Explain the dangers of smoking in detail based on the biological and scientific aspects of the consequences of nicotine in chain smokers.',
+        imageSrc: 'assets/images/video-thumbnil.svg',
+    },
+    {
+        id: 6,
+        title: 'Dangers of smoking | Health | Biology | FuseSchool',
+        duration: '2:30',
+        rating: '8/10',
+        engagement: 'Engagement Rating',
+        description:
+            'Explain the dangers of smoking in detail based on the biological and scientific aspects of the consequences of nicotine in chain smokers.',
+        imageSrc: 'assets/images/video-thumbnil.svg',
+    },
+    {
+        id: 7,
+        title: 'Dangers of smoking | Health | Biology | FuseSchool',
+        duration: '2:30',
+        rating: '8/10',
+        engagement: 'Engagement Rating',
+        description:
+            'Explain the dangers of smoking in detail based on the biological and scientific aspects of the consequences of nicotine in chain smokers.',
+        imageSrc: 'assets/images/video-thumbnil.svg',
+    },
+    {
+        id: 8,
+        title: 'Dangers of smoking | Health | Biology | FuseSchool',
+        duration: '2:30',
+        rating: '8/10',
+        engagement: 'Engagement Rating',
+        description:
+            'Explain the dangers of smoking in detail based on the biological and scientific aspects of the consequences of nicotine in chain smokers.',
+        imageSrc: 'assets/images/video-thumbnil.svg',
+    },
 ];
 
 const VideoCard = ({ video }) => {
@@ -114,7 +154,7 @@ const VideoCard = ({ video }) => {
         <>
 
             {/* New folder Modal start */}
-            <Modal show={show2} onHide={handleClose2} centered className='custom-modal'>
+            <Modal show={show2} onHide={handleClose2} centered className='custom-modal new-folder-modal'>
                 <Modal.Header closeButton>
                     <Modal.Title>New folder</Modal.Title>
                 </Modal.Header>
@@ -235,7 +275,30 @@ const VideoCard = ({ video }) => {
             </Modal>
 
 
-            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
+                <div className='my-interests-card'>
+                    <div className="video-card-1">
+                        <div className="video-card-content">
+                            <Link href="/videodetails">
+                                <div className="video-card-image">
+                                    <Image src={require("../../../assets/images/bg-in.png")} alt="video card" />
+                                    {/* <div className="video-duration">{video.duration}</div> */}
+                                </div>
+                            </Link>
+                        </div>
+                        <div className="video-card-detail p-0">
+                            <div className='dark-text'>
+                                What are you interested about so we can suggest you better content
+                            </div>
+                            <div className='btn-color-orange-design'>
+                                <button type="button" className="btn-color-orange-outline">My interests</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
                 <div className="video-card">
                     <div className="video-card-content">
                         <Link href="/videodetails">

@@ -44,7 +44,7 @@ const videoData = [
 
 function AccountDetails() {
 
-    const [isYearly, setIsYearly] = useState(true);
+    const [isYearly, setIsYearly] = useState(false);
 
     const togglePricing = () => {
         setIsYearly(!isYearly);
@@ -73,12 +73,12 @@ function AccountDetails() {
                             <div className="container">
                                 {/* CHOOSE YOUR PLAN */}
                                 <div id="js-pricing-switch" className="text-center my-4 py-2 relative js-pricing-switch">
-                                    <span className={`switch-label ${isYearly ? 'active' : ''}`}>Yearly</span>
+                                    <span className={`switch-label ${!isYearly ? 'active' : ''}`}>Yearly</span>
                                     <label className="switch">
                                         <input type="checkbox" checked={isYearly} onChange={togglePricing} />
                                         <span className="slider-price"></span>
                                     </label>
-                                    <span className={`switch-label ${!isYearly ? 'active' : ''}`}>Monthly</span>
+                                    <span className={`switch-label ${isYearly ? 'active' : ''}`}>Monthly</span>
                                     <div className="save-money--mobile mt-3">Save 10% on Yearly Plans</div>
                                 </div>
                                 {/* CHOOSE YOU PLAN END */}
@@ -292,12 +292,12 @@ function AccountDetails() {
                                 <div className="container">
                                     {/* CHOOSE YOUR PLAN */}
                                     <div id="js-pricing-switch" className="text-center my-4 py-2 relative js-pricing-switch">
-                                        <span className={`switch-label ${isYearly ? 'active' : ''}`}>Yearly</span>
+                                        <span className={`switch-label ${!isYearly ? 'active' : ''}`}>Yearly</span>
                                         <label className="switch">
                                             <input type="checkbox" checked={isYearly} onChange={togglePricing} />
                                             <span className="slider-price"></span>
                                         </label>
-                                        <span className={`switch-label ${!isYearly ? 'active' : ''}`}>Monthly</span>
+                                        <span className={`switch-label ${isYearly ? 'active' : ''}`}>Monthly</span>
                                         <div className="save-money--mobile mt-3">Save 10% on Yearly Plans</div>
                                     </div>
                                     {/* CHOOSE YOU PLAN END */}

@@ -62,7 +62,7 @@ function Sidebar() {
     return (
         <>
             {/* New folder Modal start */}
-            <Modal show={show} onHide={handleClose} centered className='custom-modal'>
+            <Modal show={show} onHide={handleClose} centered className='custom-modal new-folder-modal'>
                 <Modal.Header closeButton>
                     <Modal.Title>New folder</Modal.Title>
                 </Modal.Header>

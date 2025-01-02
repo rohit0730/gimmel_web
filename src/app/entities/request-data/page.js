@@ -327,7 +327,7 @@ function RequestData() {
             </Modal>
 
             {/* New folder Modal start */}
-            <Modal show={show6} onHide={handleClose6} centered className='custom-modal'>
+            <Modal show={show6} onHide={handleClose6} centered className='custom-modal new-folder-modal'>
                 <Modal.Header closeButton>
                     <Modal.Title>New folder</Modal.Title>
                 </Modal.Header>

@@ -16,20 +16,21 @@ function Main() {
                         <h3>Categories</h3>
                         <Link href="/categories" className="see-all">See more categories</Link>
                     </div>
+                </div>
 
+                <div className="swiper-container">
                     <SliderSection />
                 </div>
+
                 <div className="custom-container">
                     <div className="page-main-title">
                         <h3>Recommended for you</h3>
                     </div>
-
                     <VideoCardGrid />
 
                     <div className="page-main-title">
                         <h3>Recommended for you</h3>
                     </div>
-
                     <VideoCardGrid />
                 </div>
             </main>
